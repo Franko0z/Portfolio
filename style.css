@@ -16,6 +16,8 @@ input:checked + label > .arrow-down {
   object-fit: cover;
   object-position: center 10%;
   display: block;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 @media (max-width: 768px) {

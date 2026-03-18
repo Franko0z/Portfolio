@@ -1,0 +1,2 @@
+input:checked + label > .arrow-down {
+  transform: rotate(180deg);

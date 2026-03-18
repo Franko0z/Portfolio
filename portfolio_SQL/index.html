@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio di Francesco Mazzara, Junior Developer. TypeScript, JavaScript, Java.">
+    <meta property="og:title" content="Francesco Mazzara — Junior Developer">
+    <meta property="og:description" content="Sviluppatore autodidatta di Trapani. Esplora i miei progetti.">
+    <meta property="og:url" content="https://Frank0z.dev">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Img/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Img/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="./Img/favicon_io/site.webmanifest">
+    <title>Frank0z</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="bg-[#d8dee9]">
+    <header >
+    <nav class="fixed top-0 left-0 right-0 bg-[#d8dee9]  w-full flex items-center z-50 justify-between md:justify-center gap-8 px-4 py-2 h-14">
+    
+    <span class="hidden md:block text-[#003399]">SELECT 
+      <a class="text-[#6495ED] text-xl transition-colors duration-700 ease-in-out hover:text-[#D4A017]" href="#about"> Francesco_Mazzara</a>
+       FROM 
+       <span class="text-slate-700">Junior_Developer</span>
+    </span>
+    <!--Telefono-->
+    <span class="flex md:hidden leading-3 text-xl text-[#003399]">SELECT
+        <a class="text-[#6495ED] ml-1 leading-3 transition-colors text-xl duration-700 ease-in-out hover:text-[#FFBF00]" href="#about">Francesco_Mazzara </a> 
+      </span>
+    <div class="relative ">
+        <input type="checkbox" id="tendina" class="peer hidden"/>
+        
+        
+        <label for="tendina" class="hidden md:inline-flex cursor-pointer items-center rounded-2xl justify-between bg-indigo-400 px-4 py-2 text-base font-semibold text-[#fff85b] gap-2">
+            Inserisci query
+            <span class="inline-block border-l-[5px] border-r-[5px] border-t-[10px] border-l-transparent border-r-transparent border-t-black"></span>
+        </label>
+
+        <label for="tendina" class="md:hidden inline-flex cursor-pointer flex flex-col gap-1.5 p-2 " role="button" aria-controls="menu-mobile" aria-label="Apri menu di navigazione" tabindex="0">
+            <span class="block w-6 h-0.5 bg-[#003399]"></span>
+            <span class="block w-6 h-0.5 bg-[#003399]"></span>
+            <span class="block w-6 h-0.5 bg-[#003399]"></span>
+        </label>
+          <ul id="menu-mobile" class="absolute right-0 top-[50px] hidden md:w-[275px] w-[175px] rounded-xl  list-none bg-[#eee] pl-0 ease-out peer-checked:block">
+            <li class="bg-[#fff85b] mx-[15px] mt-[15px]  rounded-3xl ">
+              <a href="#stack" onclick="document.getElementById('tendina').checked=false" class="mx-[0px] my-[4px] block px-[10px] py-[13px] text-sm font-normal text-black decoration-0 ">
+                <span class="text-[#003399] tracking-wider ">JOIN </span>
+                <span class="text-[#6495ED] tracking-wider ">Tech_Stack</span>
+                <span class="hidden md:inline text-[#003399] text-xs"> TS ON JD.id = TS.id</span>
+              </a>
+            </li>
+            <li class="bg-[#fff85b] rounded-3xl mx-[15px]  my-[10px] ">
+              <a href="#esperienze" onclick="document.getElementById('tendina').checked=false" class="mx-[0] my-[4px] block px-[10px] py-[13px] text-sm font-normal text-black decoration-0 ">
+                <span class="text-[#003399] tracking-wider ">JOIN </span>
+                <span class="text-[#6495ED] tracking-wider ">Esperienze</span>
+                <span class="hidden md:inline text-[#003399] text-xs"> E ON JD.id = E.id</span>
+              </a>
+            </li>
+            <li class="bg-[#fff85b] rounded-3xl mx-[15px]  my-[10px] ">
+              <a href="#progetti"  onclick="document.getElementById('tendina').checked=false" class="mx-[0] my-[4px] block px-[10px] py-[13px] text-sm font-normal text-black  decoration-0 ">
+                <span class="text-[#003399] tracking-wider ">JOIN </span>
+                <span class="text-[#6495ED] tracking-wider ">Progetti</span>
+                <span class="hidden md:inline text-[#003399] text-xs"> P ON JD.id = P.id</span>
+              </a>
+            </li>
+            <li class="bg-[#fff85b] mb-[15px] mx-[15px]  rounded-3xl ">
+              <a href="#contatti" onclick="document.getElementById('tendina').checked=false" class="mx-[0] my-[4px] block px-[10px] py-[13px] text-sm font-normal text-black decoration-0 ">
+                <span class="text-[#003399] tracking-wider ">JOIN </span>
+                <span class="text-[#6495ED] tracking-wider ">Contatti</span>
+                <span class="hidden md:inline text-[#003399] text-xs"> C ON JD.id = C.id</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+    </header>
+
+    <main class=" mx-4 md:mx-[3%]">
+
+      <section id="about" class="mt-[10%] mb-[2%] scroll-mt-20">
+        <div class="flex flex-col-reverse md:flex-row items-center pt-[10%] md:pt-[0%] justify-center gap-0 md:gap-16">
+            <div class=" pt-[5%] text-center md:text-left w-full">
+                <h1  class="text-3xl mb-4 text-[#003399]">SELECT <span class="text-[#6495ED]"> Francesco_Mazzara </span></h1>
+                  <p class="md:text-xl text-base text-slate-700 leading-relaxed font-sans">Sono un developer autodidatta di Trapani, ho ricominciato a programmare pochi mesi fa.</p>
+                  <p class=" md:text-xl text-base text-slate-700 leading-relaxed font-sans">Ho completato l'ITIS "L.Da Vinci" e ora sto costruendo i miei primi progetti personali.</p>
+                  <p class=" md:text-xl text-base text-slate-700 leading-relaxed font-sans">Sono "motivato", veloce nell'apprendere e cerco un team dove poter crescere e contribuire fin da subito.</p>
+            </div>
+            <div class="flex justify-center w-full md:w-auto md:pr-[12%]">
+                <img style="object-position: center 10%;"class="rounded-full w-45  md:w-95 aspect-square object-cover flex-shrink-0 self-start" src="./Img/Francesco_Mazzara_img.png" />
+            </div>
+          </div>
+          <div class="flex gap-4 mt-6 justify-center md:justify-start">
+            <a href="./CV/Francesco_Mazzara_CV.pdf" download class="bg-[#003399] text-white px-6 py-2 rounded-xl font-semibold hover:bg-[#6495ED] transition-colors duration-300">
+              <img class="inline md:w-5 md:h-5 w-5  h-5" src="https://img.icons8.com/parakeet-filled/48/FFFFFF/download.png" alt="download"/>
+               CV 
+            </a>
+            <a href="#contatti" class="border-2 border-[#003399] text-[#003399] px-6 py-2 rounded-xl font-semibold hover:bg-[#003399] hover:text-white transition-colors duration-300">
+               Contattami 
+            </a>
+          </div>
+      </section>
+
+      <section id="stack" class="mt-[10%] mb-[2%] scroll-mt-20">
+        <h2 class="text-3xl text-[#003399]">INSERT INTO
+          <span class="text-[#6495ED]">Tech_Stack</span>
+        </h2>
+        <div class="hidden md:flex align-center flex-col md:flex-row justify-around">
+
+          <div class="p-10 md:my-[5%] my-[2%] tracking-wider border-1 rounded-xl bg-[#F5F5F5]">
+            <center><span class="md:text-3xl text-2xl text-[#48a259]">--Back-end</span></center><br>
+            <span class="md:text-2xl text-lg text-[#003399]">VALUES</span>
+            <span class="md:text-2xl tracking-wider text-lg">
+              (<img class="inline md:w-14 md:h-14 w-8 h-8" src="https://img.icons8.com/3d-fluency/94/java-coffee-cup-logo.png" alt="java"/>,<span class="md:text-2xl tracking-wider text-base text-[#cb2821]">'Java'</span>,<span class="md:text-2xl tracking-wider text-base text-[#cb2821]">'back-end'</span>,<span class="md:text-2xl tracking-wider text-base text-[#57a639]">70%</span>);
+            </span><br>
+            <span class="md:text-2xl tracking-wider text-lg text-[#003399]">VALUES</span>
+            <span class="md:text-2xl tracking-wider text-lg">
+              (<img class="inline md:w-14 md:h-14 w-8 h-8" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript"/>,<span class="md:text-2xl tracking-wider text-base text-[#cb2821]">'JavaScript'</span>,<span class="md:text-2xl tracking-wider text-base text-[#cb2821]">'back-end'</span>,<span class="md:text-2xl tracking-wider text-base text-[#57a639]">80%</span>);
+            </span> <br>
+            <span class="md:text-2xl text-lg tracking-wider text-[#003399]">VALUES</span>
+             <span class="md:text-2xl tracking-wider text-lg">
+              (<img class="inline md:w-14 md:h-14 w-8 h-8" src="https://img.icons8.com/color/48/typescript.png" alt="typescript"/>,<span class="md:text-2xl tracking-wider text-base text-[#cb2821]">'TypeScript'</span>,<span class="md:text-2xl tracking-wider text-base text-[#cb2821]">'back-end'</span>,<span class="md:text-2xl tracking-wider text-base text-[#57a639]">75%</span>);
+            </span>
+          </div>
+
+          <div class="p-10 md:my-[5%] my-[2%] tracking-wider border-1 rounded-xl bg-[#F5F5F5]">
+            <center><span class="md:text-3xl text-2xl text-[#48a259]">--Front-end</span></center><br>
+            <span class="md:text-2xl tracking-wider text-lg text-[#003399]">VALUES</span>
+            <span class="md:text-2xl tracking-wider text-lg">
+              (<img class="inline md:w-14 md:h-14 w-8 h-8" src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML"/>,<span class="md:text-2xl tracking-wider text-base text-[#cb2821]">'HTML'</span>,<span class="md:text-2xl tracking-wider text-base text-[#cb2821]">'front-end'</span>,<span class="md:text-2xl tracking-wider text-base text-[#57a639]">75%</span>);
+            </span><br>
+            <span class="md:text-2xl tracking-wider text-lg text-[#003399]">VALUES</span>
+            <span class="md:text-2xl tracking-wider text-lg">
+              (<img class="inline md:w-14 md:h-14 w-8 h-8" src="https://img.icons8.com/color/48/css3.png" alt="CSS"/>,<span class="md:text-2xl tracking-wider text-base text-[#cb2821]">'CSS'</span>,<span class="md:text-2xl tracking-wider  text-base text-[#cb2821]">'front-end'</span>,<span class="md:text-2xl tracking-wider text-base text-[#57a639]">70%</span>);
+            </span><br>
+            <span class="md:text-2xl tracking-wider text-lg text-[#003399]">VALUES</span>
+            <span class="md:text-2xl tracking-wider text-lg">
+              (<img class="inline md:w-14 md:h-14 w-8 h-8" src="https://img.icons8.com/color/48/tailwind_css.png" alt="tailwind"/>,<span class="md:text-2xl text-base text-[#cb2821]">'Tailwind CSS'</span>,<span class="md:text-2xl text-base tracking-wider text-[#cb2821]">'front-end'</span>,<span class="md:text-2xl tracking-wider text-base text-[#57a639]">70%</span>);
+            </span>
+          </div>
+
+        </div>
+
+        <!--Telefono-->
+        <div class="flex md:hidden flex-col gap-2 mt-6">
+
+          <div>
+            <div class="flex flex-col gap-2">
+              <div class="flex px-4 py-3 border-1 justify-between tracking-wider text-l gap-2 rounded-xl bg-[#F5F5F5]">
+                  <img class="w-7 h-7" src="https://img.icons8.com/3d-fluency/94/java-coffee-cup-logo.png" alt="java"/>
+                  <span class="text-[#cb2821] ">'Java'</span>
+                  <span class="text-[#cb2821] ">'back-end'</span>
+                  <span class="text-[#57a639] font-medium">70%</span>
+              </div>
+              <div class="flex items-center justify-between tracking-wider text-l gap-2 px-4 py-3 border-1 rounded-xl bg-[#F5F5F5]">
+                  <img class="w-7 h-7" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript"/>
+                  <span class="text-[#cb2821] ">'JavaScript'</span>
+                  <span class="text-[#cb2821] ">'back-end'</span>
+                  <span class="text-[#57a639] font-medium">80%</span>
+              </div>
+              <div class="flex items-center justify-between tracking-wider text-l gap-2 px-4 py-3 border-1 rounded-xl bg-[#F5F5F5]">
+                  <img class="w-7 h-7" src="https://img.icons8.com/color/48/typescript.png" alt="typescript"/>
+                  <span class="text-[#cb2821] ">'TypeScript'</span>
+                  <span class="text-[#cb2821] ">'back-end'</span>
+                  <span class="text-[#57a639] font-medium">75%</span>
+              </div>    
+            </div>
+          </div>
+
+          <div>
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center justify-between tracking-wider text-l gap-2 px-4 py-3 border-1 rounded-xl bg-[#F5F5F5]">
+                  <img class="w-7 h-7" src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML"/>
+                  <span class="text-[#cb2821] ">'HTML'</span>
+                  <span class="text-[#cb2821] ">'front-end'</span>
+                  <span class="text-[#57a639] font-medium">75%</span>
+              </div>
+              <div class="flex items-center justify-between tracking-wider text-l gap-2 px-4 py-3 border-1 rounded-xl bg-[#F5F5F5]">
+                  <img class="w-7 h-7" src="https://img.icons8.com/color/48/css3.png" alt="CSS"/>
+                  <span class="text-[#cb2821] ">'CSS'</span>
+                  <span class="text-[#cb2821] ">'front-end'</span>
+                  <span class="text-[#57a639] font-medium">70%</span>
+              </div>
+              <div class="flex items-center justify-between gap-2 tracking-wider text-l px-4 py-3 border-1 rounded-xl bg-[#F5F5F5]">
+                  <img class="w-7 h-7" src="https://img.icons8.com/color/48/tailwind_css.png" alt="tailwind"/>
+                  <span class="text-[#cb2821] ">'Tailwind CSS'</span>
+                  <span class="text-[#cb2821] ">'front-end'</span>
+                  <span class="text-[#57a639] font-medium">70%</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="lingue" class="mt-[10%] mb-[2%] scroll-mt-20">
+        <h2 class="text-3xl text-[#003399]">SELECT <span class="text-[#6495ED]">Lingue.*</span></h2>
+        <div class="hidden md:block p-10 md:my-[5%] my-[2%] tracking-wider border-1 rounded-xl bg-[#F5F5F5] overflow-x-auto">
+          <table class="w-full border-collapse text-xl">
+            <thead>
+              <tr class="border-b-2 border-gray-300">
+                <th class="text-left px-3 py-2 text-[#003399] font-medium">lingua</th>
+                <th class="text-left px-3 py-2 text-[#003399] font-medium">livello</th>
+                <th class="text-left px-3 py-2 text-[#003399] font-medium">padronanza</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-200">
+                <td class="px-3 py-4 text-[#cb2821]">🇮🇹 'Italiano'</td>
+                <td class="px-3 py-4">
+                  <span class="bg-[#003399] text-white text-sm px-4 py-1 rounded-full">Madrelingua</span>
+                </td>
+                <td class="px-3 py-4 text-[#57a639]">100%</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-4 text-[#cb2821]">🇬🇧 'Inglese'</td>
+                <td class="px-3 py-4">
+                  <span class="bg-[#6495ED] text-white text-sm px-4 py-1 rounded-full">B1</span>
+                </td>
+                <td class="px-3 py-4 text-[#57a639]">55%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!--Telefono-->
+        <div class="flex flex-col gap-3 mt-6 md:hidden">
+          <div class="flex items-center justify-between tracking-wider px-4 py-4 border-1 rounded-xl bg-[#F5F5F5]">
+              <span class="text-2xl ">🇮🇹 </span>
+              <span class="text-[#cb2821] text-l">'Italiano'</span>
+              <span class="bg-[#003399] text-white text-sm px-3 py-1 rounded-full ">Madrelingua</span>
+              <span class="text-[#57a639] text-l ">100%</span>
+          </div>
+          <div class="flex items-center justify-between tracking-wider px-4 py-4 border-1 rounded-xl bg-[#F5F5F5]">
+              <span class="text-2xl  ">🇬🇧</span>
+              <span class="text-[#cb2821] text-l ">'Inglese'</span>
+              <span class="bg-[#6495ED] text-white text-sm px-3 py-1 rounded-full ">B1</span>
+              <span class="text-[#57a639] text-l ">55%</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="esperienze" class="mt-[10%] mb-[2%] scroll-mt-20">
+        <h2 class="text-3xl text-[#003399]">SELECT <span class="text-[#6495ED]">Esperienze.*</span></h2>
+        <!--<p class="text-[#48a259] tracking-wider mt-2">-- ORDER BY data DESC</p>-->
+
+           <div class="relative mt-[5%] pl-8 border-l-2 border-[#6495ED]/30 ml-4">
+
+            <div class="relative mb-12">
+              <div class="absolute -left-[41px] top-1 w-3 h-3 rounded-full bg-[#6495ED] border-2 border-[#d8dee9]"></div>
+              <span class="font-mono text-sm text-slate-400">2024 → oggi</span>
+              <h3 class="text-2xl text-[#003399] mt-1">Beehive ITS -Steve Jobs </h3>
+              <p class="text-xl text-[#6495ED]">Corso Informatica - Trapani</p>
+              <p class=" text-xl text-slate-700 mt-1">Costruzione autonoma di applicazioni web. Focus su TypeScript, Java e architetture full-stack.</p>
+              <div class="flex flex-wrap  tracking-wider  gap-2 mt-2">
+                <span class="text-sm text-[#57a639]">'YouDrive'</span>
+                <span class="text-sm text-[#57a639]">'WorkHub Milano'</span>
+                <span class="text-sm text-[#57a639]">'TypeScript'</span>
+              </div>
+            </div>
+
+            <div class="relative mb-12">
+              <div class="absolute -left-[41px] top-1 w-3 h-3 rounded-full bg-[#6495ED] border-2 border-[#d8dee9]"></div>
+              <span class="font-mono text-sm text-slate-400">2018 → 2023</span>
+              <h3 class="text-2xl text-[#003399] mt-1">ITIS "L. Da Vinci"</h3>
+              <p class=" text-xl text-[#6495ED]">Diploma Informatica — Trapani</p>
+              <p class=" text-xl text-slate-700 mt-1">Percorso tecnico in informatica. Basi di programmazione, reti, sistemi e database.</p>
+              <div class="flex flex-wrap  tracking-wider  gap-2 mt-2">
+                <span class="text-sm text-[#57a639]">'Java'</span>
+                <span class="text-sm text-[#57a639]">'SQL'</span>
+                <span class="text-sm text-[#57a639]">'Reti'</span>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section id="progetti" class="mt-[10%] mb-[2%] scroll-mt-20">
+        <h2 class="text-3xl text-[#003399]" >
+          INSERT INTO
+          <span class="text-[#6495ED] ">
+            Progetti
+          </span>
+          <!--<span class="ml-2 text-base font-normal ">(Nome,Descrizione,Linguaggi,GitHub) </span>-->
+        </h2>
+        <div class="flex items-center flex-col md:flex-row justify-around">
+            <div class="p-10 mt-[5%] tracking-wider border-1 rounded-xl bg-[#F5F5F5]">
+              <span class="text-2xl text-[#003399]"> VALUES </span> <br>
+              <span class="text-2xl text-[#cb2821]">'YouDrive'</span><br>
+              <span class="text-lg text-[#cb2821]">'Webapp per la ricerca e gestione <br>dei veicoli tramite targa.'</span><br>
+              <span class="text-xl tracking-wider  text-[#57a639]">'SQL, HTML, CSS, TypeScript'</span><br>
+              <a target="_blank" href="https://github.com/salvgit-afk/YouDrive" >
+                <span class="text-xl italic transition-colors font-semibold tracking-wider duration-700 ease-in-out text-slate-500 hover:text-[#131834]">'GitHub'→</span>
+              </a>
+            </div>
+            <div class="p-10 mt-[5%] tracking-wider border-1 rounded-xl bg-[#F5F5F5]">
+              <span class="text-2xl text-[#003399]"> VALUES </span> <br>
+              <span class="text-2xl text-[#cb2821]">'Workhub-Milano'</span><br>
+              <span class="text-lg  text-[#cb2821] ">'Sito vetrina e gestione accessi <br> per un azienda di Coworking.'</span><br>
+              <span class="text-xl  tracking-wider text-[#57a639]">'JavaScript, HTML, SQL'</span><br>
+              <a target="_blank"  href="https://github.com/FraCus1906/WorkHub_Milano_es">
+                <span class="text-xl italic font-semibold transition-colors tracking-wider duration-700 ease-in-out text-slate-500 hover:text-[#131834]">'GitHub'→</span>
+              </a>
+            </div>
+            <div class="p-10 mt-[5%] tracking-wider border-1 rounded-xl bg-[#F5F5F5]">
+              <span class="text-2xl text-[#003399]"> VALUES </span> <br>
+              <span class="text-2xl text-[#cb2821]">'Vario'</span><br>
+              <span class="text-lg  text-[#cb2821]">'Sperimentazione personale.'</span><br>
+              <span class="text-xl  tracking-wider  text-slate-500"> //NULL </span><br>
+              <a target="_blank" href="https://github.com/Franko0z/Test">
+                <span class="text-xl italic font-semibold text-slate-500 transition-colors tracking-wider duration-700 ease-in-out hover:text-[#131834]">'GitHub'→</span>
+              </a>
+            </div>
+        </div>
+      </section>
+
+      <footer id="contatti" class=" mt-[10%]  scroll-mt-20 pb-6">
+        <span class="text-[#003399] text-3xl">
+          SELECT
+          <span class="text-[#6495ED] ">
+            Contatti.*
+          </span>
+        </span>
+        <div class="mt-[5%]">
+          <div class="flex flex-col md:flex-row items-center tracking-wider justify-evenly ">
+            <span class=" md:text-xl text-l text-slate-500 transition-colors duration-700 ease-in-out hover:text-[#131834] px-4 py-2 break-all">
+              <img width="40" height="40" class="inline" src="https://img.icons8.com/color/48/gmail-new.png" alt="gmail-new"/>
+              Francescomazzara0@gmail.com
+            </span>
+            <a  target="_blank" href="https://www.linkedin.com/in/francesco-mazzara/">
+              <span class=" md:text-xl text-l text-slate-500 transition-colors duration-700 ease-in-out hover:text-[#131834] px-4 py-2">
+                <img width="40" height="40" class="inline" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/>
+                Francesco-mazzara
+              </span>
+            </a>
+            <a target="_blank" href="https://github.com/Franko0z" class="mt-3 md:mt-0">
+              <span class=" md:text-xl text-l  text-slate-500 transition-colors duration-700 ease-in-out hover:text-[#131834] px-4 py-2">
+                <img width="40" height="40" class="inline" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github"/>
+                Franko0z
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="flex justify-between mt-[5%]">
+          <span class=" md:text-sm text-xs text-slate-500 ">By Francesco_Mazzara · 2026</span>
+          <span class=" text-right text-xs md:text-sm text-slate-500">built with anxiety and drugs</span>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
